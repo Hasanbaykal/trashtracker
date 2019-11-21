@@ -12,8 +12,6 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url("/images/garbagebackground2.jpg");
-                background-size: 100%;
                 color: #000000;
                 font-family: 'Poiret One', sans-serif;
                 font-weight: 200;
@@ -24,6 +22,16 @@
             .full-height {
                 height: 100vh;
             }
+
+            #bg {
+                position: fixed; 
+                top: 0; 
+                left: 0; 
+	
+                /* Preserve aspet ratio */
+                min-width: 100%;
+                min-height: 100%;
+                }
 
             .flex-center {
                 align-items: center;
@@ -67,6 +75,9 @@
         </style>
     </head>
     <body>
+
+    <img src="/images/garbagebackground2.jpg" id="bg" alt="">
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
