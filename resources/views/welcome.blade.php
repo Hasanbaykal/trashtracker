@@ -9,13 +9,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
-                color: #000000;
-                font-family: 'Poiret One', sans-serif;
+                font-family: 'Raleway', sans-serif;
                 height: 100vh;
                 margin: 0;
             }
@@ -32,7 +31,30 @@
                 height: auto;
                 }
 
-              
+                .navbar-brand-1, .navbar-brand-2 {
+                  font-size: 20px;
+                }
+
+                .navbar-header, .navbar-toggle, .collapsed {
+                  background: rgba(255, 255, 255, 0.0);
+                }
+
+                .collapse, .navbar-collapse {
+                  background: rgba(255, 255, 255, 0);
+                }
+
+                .active-page {
+                  background-color: whitesmoke;
+                }
+
+                .navbar-toggle, .collapsed {
+                  float: left;
+                  left: 35%;
+                  width: 30%;
+                  border-radius: 20px;
+                  background-color: whitesmoke;
+                  font-size: 20px;
+                }
 
         </style>
     </head>
@@ -41,32 +63,30 @@
     <img src="/images/garbagebackground2.jpg" id="bg" alt="">
 
 
-<nav class="navbar bg-transparent navbar-inverse">
-  <div class="container-fluid">
+<nav class="navbar">
+  <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+              data-target="#codebrainery-toggle-nav" aria-expanded="false">Navigatie
       </button>
-      <a class="navbar-brand" href="http://127.0.0.1:8000/">De Klasbak</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="http://127.0.0.1:8000/idee">Het Idee</a></li>
-        <li><a href="http://127.0.0.1:8000/top10">De Top 10</a></li>
-        <li><a href="http://127.0.0.1:8000/scholen">De Scholen</a></li>
-        <li><a href="http://127.0.0.1:8000/bestellen">Bestellen</a></li>
-        <li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
+    <div class="collapse navbar-collapse" id="codebrainery-toggle-nav">
+      <ul class="nav navbar-nav mr-auto">
+        <li><a class="navbar-brand-1 active-page" href="http://127.0.0.1:8000">De Klasbak</a></li>
+        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/idee">Het Idee</a></li>
+        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/top10">De Top 10</a></li>
+        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/scholen">De Scholen</a></li>
+        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/bestellen">Bestellen</a></li>
+        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/contact">Contact</a></li>
       </ul>
       @if (Route::has('login'))
       <ul class="nav navbar-nav navbar-right">
         @auth
-            <li><a class="a-topright" href="{{ url('/home') }}">Home</a></li>
+            <li><a class="navbar-brand-2" href="{{ url('/home') }}">Home</a></li>
         @else
-            <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span>Login</a></li>
+            <li><a class="navbar-brand-2" href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span>Login</a></li>
         @if (Route::has('register'))
-        <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
+        <li><a class="navbar-brand-2" href="{{ route('register') }}"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
         @endif
       @endauth
       </ul>
