@@ -31,6 +31,8 @@
                 /* Preserve aspet ratio */
                 min-width: 100%;
                 min-height: 100%;
+                max-width: 100%;
+                height: auto;
                 }
 
             .flex-center {
@@ -55,7 +57,11 @@
             }
 
             .title {
-                font-size: 120px;
+                font-size: 8vw;
+            }
+
+            .m-b-md {
+                margin-left: 600px;
             }
 
             .links > a {
@@ -66,10 +72,6 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-left: 600px;
             }
 
         </style>
