@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+<img src="/images/garbagebackground2.jpg" id="bg" alt="">
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

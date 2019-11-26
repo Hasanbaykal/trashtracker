@@ -15,78 +15,60 @@
         <style>
             html, body {
                 font-family: 'Raleway', sans-serif;
-                height: 100vh;
-                margin: 0;
+                height: 100%;
+                background: url("/images/garbagebackground2.jpg") no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                background-size: cover;
+                -o-background-size: cover;
             }
 
-            #bg {
-                position: fixed; 
-                top: 0; 
-                left: 0; 
-	
-                /* Preserve aspet ratio */
-                min-width: 100%;
-                min-height: 100%;
-                max-width: 100%;
-                height: auto;
+                /* Container holding the image and the text */
+                .container-title {
+                  position: relative;
                 }
 
-                .navbar-brand-1, .navbar-brand-2 {
-                  font-size: 20px;
-                }
-
-                .navbar-header, .navbar-toggle, .collapsed {
-                  background: rgba(255, 255, 255, 0.0);
-                }
-
-                .collapse, .navbar-collapse {
-                  background: rgba(255, 255, 255, 0);
-                }
-
-                .active-page {
-                  background-color: whitesmoke;
-                }
-
-                .navbar-toggle, .collapsed {
-                  float: left;
-                  left: 35%;
-                  width: 30%;
-                  border-radius: 20px;
-                  background-color: whitesmoke;
-                  font-size: 20px;
+                /* Bottom right text */
+                .text-block-title {
+                position: absolute;
+                top: 9vw;
+                left: 43vw;
+                font-size: 2.5vw;
+                background: rgba(255, 255, 255, 0.0);
+                color: black;
+                transform: rotate(1.5deg);
                 }
 
         </style>
     </head>
     <body>
 
-    <img src="/images/garbagebackground2.jpg" id="bg" alt="">
-
-
-<nav class="navbar">
-  <div class="container">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
-              data-target="#codebrainery-toggle-nav" aria-expanded="false">Navigatie
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
+      <a class="navbar-brand" href="http://127.0.0.1:8000">De Klasbak</a>
     </div>
-    <div class="collapse navbar-collapse" id="codebrainery-toggle-nav">
-      <ul class="nav navbar-nav mr-auto">
-        <li><a class="navbar-brand-1 active-page" href="http://127.0.0.1:8000">De Klasbak</a></li>
-        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/idee">Het Idee</a></li>
-        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/top10">De Top 10</a></li>
-        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/scholen">De Scholen</a></li>
-        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/bestellen">Bestellen</a></li>
-        <li><a class="navbar-brand-1" href="http://127.0.0.1:8000/contact">Contact</a></li>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="http://127.0.0.1:8000/idee">Het Idee</a></li>
+        <li><a href="http://127.0.0.1:8000/top10">De Top 10</a></li>
+        <li><a href="http://127.0.0.1:8000/scholen">De Scholen</a></li>
+        <li><a href="http://127.0.0.1:8000/bestellen">Bestellen</a></li>
+        <li><a href="http://127.0.0.1:8000/contact">Contact</a></li>
       </ul>
       @if (Route::has('login'))
       <ul class="nav navbar-nav navbar-right">
-        @auth
-            <li><a class="navbar-brand-2" href="{{ url('/home') }}">Home</a></li>
-        @else
-            <li><a class="navbar-brand-2" href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span>Login</a></li>
+      @auth
+      <li><a href="{{ url('/home') }}">Home</a></li>
+      @else
+        <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
         @if (Route::has('register'))
-        <li><a class="navbar-brand-2" href="{{ route('register') }}"><span class="glyphicon glyphicon-log-in"></span>Register</a></li>
+        <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         @endif
       @endauth
       </ul>
@@ -94,6 +76,13 @@
     </div>
   </div>
 </nav>
+
+<div class="container-title">
+            <div class="text-block-title">
+                <p>De Klasbak</p>
+                <p>Scheid Afval Met Plezier</p>
+            </div>
+        </div>
               
 </body>
 </html>
