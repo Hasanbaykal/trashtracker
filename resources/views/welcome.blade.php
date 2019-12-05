@@ -17,7 +17,7 @@
             html, body {
                 font-family: 'Raleway', sans-serif;
                 height: 100%;
-                background: url("/images/klasbaklogocomplete.png") no-repeat center center fixed;
+                background: url("/images/klasbaklogocomplete3.png") no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 background-size: cover;
