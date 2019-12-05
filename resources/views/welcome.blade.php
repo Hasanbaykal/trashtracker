@@ -17,7 +17,7 @@
             html, body {
                 font-family: 'Raleway', sans-serif;
                 height: 100%;
-                background: url("/images/homepageklasbak.png") no-repeat center center fixed;
+                background: url("/images/klasbaklogocomplete.png") no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 background-size: cover;
@@ -32,15 +32,24 @@
 
             .menu {
     position: fixed; 
-    width: 220px;
+    width: 14%;
     z-index: 1; 
-    top: 35px;
+    top: 2%;
 }
+
+  .menu-list1 {
+    position: fixed; 
+    width: 12%;
+    z-index: 1; 
+    top: 80%;
+  }
 
 #menu-list {
     background-color: rgba(120, 180, 0, 0.8);
+    border-radius: 15px;
     font-size: 16px; 
     padding: 0;
+    text-align: justify;
 }
 
 #menu-list > li {
@@ -59,18 +68,17 @@
 #menu-list > .active > a,
 #menu-list > li > a:hover { 
     background-color: rgba(255,255,255,0.25);
+    border-radius: 15px;
 }
 
 .logo-klasbak {
-  margin-left: -4%;
-  margin-top: 22%;
+  margin-left: -%;
+  margin-top: 30%;
 }
 
         </style>
     </head>
     <body>
-
-    <img src="/images/klasbaklogonobackground.png" class="logo-klasbak">
 
     <div class="menu visible-md visible-lg">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -88,7 +96,7 @@
         <li class=""><a href="http://127.0.0.1:8000/contact">Contact</a></li>
       </ul>
       @if (Route::has('login'))
-      <ul id="menu-list">
+      <ul id="menu-list" class="menu-list1">
       @auth
       <li><a href="{{ url('/home') }}">Home</a></li>
       @else
