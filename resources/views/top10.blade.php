@@ -88,9 +88,9 @@
       </button>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul id="menu-list">
-        <li class="active"><a href="http://127.0.0.1:8000">Home</a></li>
+        <li class=""><a href="http://127.0.0.1:8000">Home</a></li>
         <li class=""><a href="http://127.0.0.1:8000/idee">Het Idee</a></li>
-        <li class=""><a href="http://127.0.0.1:8000/top10">De Top 10</a></li>
+        <li class="active"><a href="http://127.0.0.1:8000/top10">De Top 10</a></li>
         <li class=""><a href="http://127.0.0.1:8000/scholen">De Scholen</a></li>
         <li class=""><a href="http://127.0.0.1:8000/bestellen">Bestellen</a></li>
         <li class=""><a href="http://127.0.0.1:8000/contact">Contact</a></li>
