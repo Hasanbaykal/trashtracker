@@ -76,6 +76,44 @@
   margin-top: 30%;
 }
 
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.w3-container {
+  max-width:500px;
+	width:100%;
+	margin:0 auto;
+  margin-top: 4%;
+	position:relative;
+  text-align: center;
+}
+
+.scholenh2 {
+  color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+.w3-content, .w3-display-container {
+  max-width:500px;
+	width:100%;
+	margin:0 auto;
+  margin-top: 4%;
+	position:relative;
+  text-align: center;
+}
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+
         </style>
     </head>
     <body>
@@ -90,8 +128,7 @@
       <ul id="menu-list">
         <li class=""><a href="http://127.0.0.1:8000">Home</a></li>
         <li class=""><a href="http://127.0.0.1:8000/idee">Het Idee</a></li>
-        <li class=""><a href="http://127.0.0.1:8000/top10">De Top 10</a></li>
-        <li class="active"><a href="http://127.0.0.1:8000/scholen">De Scholen</a></li>
+        <li class="active"><a href="http://127.0.0.1:8000/scholen">Scholen & Top 10</a></li>
         <li class=""><a href="http://127.0.0.1:8000/bestellen">Bestellen</a></li>
         <li class=""><a href="http://127.0.0.1:8000/contact">Contact</a></li>
       </ul>
@@ -109,6 +146,65 @@
       @endif
     </div>
     </div>
+
+    <div class="w3-container">
+    <form id="contact" action="" method="post">
+  <h2 class="scholenh2">Scholen & Top 10</h2>
+  <p>Hier zie je de lijst van scholen die meedoen met het project. Daarnaast is er een ranglijst met scholen die het beste scheiden.</p>
+  </form>
+</div>
+
+
+<div class="w3-content w3-display-container" style="max-width:800px">
+<form id="contact" action="" method="post">
+  <p class="mySlides">De scholen die meedoen zijn: <br></br>
+        1. De Singel<br></br>
+        2. De Provenier<br></br>
+        3. Klimop<br></br>
+        4. ...<br></br>
+        5. ...<br></br>
+        6. ...
+  </p>
+  <img class="mySlides" src="/images/number1.png" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+  </form>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
               
 </body>
 </html>

@@ -17,7 +17,7 @@
             html, body {
                 font-family: 'Raleway', sans-serif;
                 height: 100%;
-                background: url("/images/klasbaklogocomplete3.png") no-repeat center center fixed;
+                background: url("/images/klasbaklogocomplete.png") no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 background-size: cover;
@@ -90,8 +90,7 @@
       <ul id="menu-list">
         <li class="active"><a href="http://127.0.0.1:8000">Home</a></li>
         <li class=""><a href="http://127.0.0.1:8000/idee">Het Idee</a></li>
-        <li class=""><a href="http://127.0.0.1:8000/top10">De Top 10</a></li>
-        <li class=""><a href="http://127.0.0.1:8000/scholen">De Scholen</a></li>
+        <li class=""><a href="http://127.0.0.1:8000/scholen">Scholen & Top 10</a></li>
         <li class=""><a href="http://127.0.0.1:8000/bestellen">Bestellen</a></li>
         <li class=""><a href="http://127.0.0.1:8000/contact">Contact</a></li>
       </ul>

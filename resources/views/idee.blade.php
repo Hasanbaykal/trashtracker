@@ -76,6 +76,39 @@
   margin-top: 30%;
 }
 
+.container {
+	max-width:500px;
+	width:100%;
+	margin:0 auto;
+  margin-top: 4%;
+	position:relative;
+}
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#contact h3 {
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:20px;
+}
+
+.titleform, .undertitleform {
+    text-align: center;
+}
+
         </style>
     </head>
     <body>
@@ -90,8 +123,7 @@
       <ul id="menu-list">
         <li class=""><a href="http://127.0.0.1:8000">Home</a></li>
         <li class="active"><a href="http://127.0.0.1:8000/idee">Het Idee</a></li>
-        <li class=""><a href="http://127.0.0.1:8000/top10">De Top 10</a></li>
-        <li class=""><a href="http://127.0.0.1:8000/scholen">De Scholen</a></li>
+        <li class=""><a href="http://127.0.0.1:8000/scholen">Scholen & Top 10</a></li>
         <li class=""><a href="http://127.0.0.1:8000/bestellen">Bestellen</a></li>
         <li class=""><a href="http://127.0.0.1:8000/contact">Contact</a></li>
       </ul>
@@ -108,6 +140,36 @@
       </ul>
       @endif
     </div>
+    </div>
+
+    <div class="container">
+    <form id="contact" action="" method="post">
+    <h3 class="titleform">De Klasbak</h3>
+    <h4 class="undertitleform">Ons concept biedt een platform aan voor basisscholen om hun resultaten bij te houden en te
+delen met soortgenoten. Door middel van slimme prullenbakken wordt er data verzameld
+om de scores te berekenen. Deze gegevens worden vervolgens naar het online platform
+gestuurd waaruit een ranking bepaalt wordt.
+<br></br>
+<img src="/images/ideepage1.png" height="120" width="400">
+<br></br>
+Om data te verzamelen van het afval is het de bedoeling dat het gewicht per afvalbak
+bijgehouden wordt voordat de bak geleegd wordt. Het gewicht kan via een arduino
+uitgelezen worden en vervolgens via een WiFi / Bluetooth verbinding verstuurd worden naar
+het online platform. Zodra de gegevens het online platform bereiken kunnen hier
+verschillende dingen mee in kaart worden gebracht. Om de hiërarchie tussen de deelnemers
+te bepalen wordt een schaal toegepast om het totaal aantal punten te berekenen. Uit onze
+deskresearch komt ook de mogelijkheid naar voren om bij te houden wie er iets weggooit en
+of deze persoon wel daadwerkelijk bezig is met het scheiden van zijn afval. Deze laatste
+toepassing kan dan weer heel toepasbaar zijn in een bedrijfssetting om elkaar te wijzen op
+het niet scheiden.
+<br></br>
+<img src="/images/ideepage2.png" height="120" width="400">
+<br></br>
+Met toevoegingen zoals gamification en de competitie willen we het voor de kinderen zowel
+leerzaam als leuk maken. Met een aantal functionaliteiten zoals extra geluiden of een
+bepaald vorm op het klepje van de bak kunnen we er ook voor zorgen dat we zo veel
+mogelijk pains uitschakelen.</h4>
+    </form>
     </div>
               
 </body>
